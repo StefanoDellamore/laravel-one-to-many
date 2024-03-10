@@ -24,7 +24,14 @@
                                 {{ $project->content }}
                             </p>
 
-                            
+                            @if ($project->type != null)
+                                <div class="btn btn-light mb-3">
+                                    <a href="{{ route('types.show', ['type'=>$project->type->slug]) }}">
+                                        {{ $project->type->title }}
+                                    </a>
+                                </div>
+                                
+                            @endif
 
                             <div class="edit-buttons-container d-flex justify-content-between">
 

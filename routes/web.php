@@ -22,6 +22,14 @@ use App\Http\Controllers\Admin\TypeController as AdminTypeController;
 
 Route::get('/', [MainController::class, 'index'])->name('home');
 
+Route::prefix('types')
+            ->name('types.')
+            ->group(function () {
+
+            Route::get('/', [AdminTypeController::class, 'index'])->name('index');
+            Route::get('/{type}', [AdminTypeController::class, 'show'])->name('show');
+});
+
 Route::prefix('projects')
     ->name('projects.')
     ->group(function(){
