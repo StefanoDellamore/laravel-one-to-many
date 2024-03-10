@@ -7,9 +7,12 @@ use Illuminate\Database\Seeder;
 
 //models
 use App\Models\Project;
+use App\Models\Type;
 
 //Helpers
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Schema;
+
 class ProjectSeeder extends Seeder
 {
     /**
@@ -17,7 +20,10 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
         Project::truncate();
+        Schema::enableForeignKeyConstraints();
+
         for ($i=0; $i < 10; $i++) {
             
             $title = fake()->sentence();
@@ -27,6 +33,7 @@ class ProjectSeeder extends Seeder
                 'title' => $title,
                 'slug' => $slug,
                 'content' => fake()->paragraph(),
+                'type_id' => Type::inRandomOrder()->first()->id,
                 'status' => fake()->boolean(),
                 ]);
         }

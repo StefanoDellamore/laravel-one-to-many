@@ -14,6 +14,7 @@ class Project extends Model
         'title',
         'slug',
         'content',
+        'category_id',
         'status',
     ];
 }
