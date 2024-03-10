@@ -13,7 +13,6 @@ use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
 
 //Helpers
-
 use Illuminate\Support\Str;
 
 class ProjectController extends Controller
