@@ -16,7 +16,7 @@ class TypeSeeder extends Seeder
      */
     public function run(): void
     {
-        Type::troncate();
+        Type::truncate();
 
         $allType = [
             'HTML',
@@ -30,7 +30,7 @@ class TypeSeeder extends Seeder
 
         foreach ($allType as $singleType) {
             $type = Type::create([
-                'tile' => $singleType,
+                'title' => $singleType,
                 'slug' => str() -> slug($singleType),
             ]);
         }
