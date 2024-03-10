@@ -17,4 +17,12 @@ class Project extends Model
         'category_id',
         'status',
     ];
+
+
+    //Reletionships
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }
