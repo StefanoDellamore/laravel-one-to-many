@@ -1,3 +1,32 @@
+# Esercizio
+
+Continuiamo a lavorare sul codice dei giorni scorsi, ma in una nuova repo e aggiungiamo una nuova entità Type.
+Questa entità rappresenta la tipologia di progetto ed è in relazione one to many con i progetti.
+
+I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che abbiamo fatto nelle lezioni dei giorni scorsi:
+
+_Creare la migration per la tabella types
+
+_Creare il model Type
+
+_Creare la migration di modifica per la tabella projects per aggiungere la chiave esterna
+
+_Aggiungere ai model Type e Project i metodi per definire la relazione one to many
+
+_Visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente
+permettere all'utente di associare una tipologia nella pagina di creazione e modifica di un progetto
+
+_gestire il salvataggio dell'associazione progetto-tipologia con opportune regole di validazione
+
+BONUS:
+
+Bonus 1:
+creare il seeder per il model Type.
+Bonus 2:
+aggiungere le operazioni CRUD per il model Type, in modo da gestire le tipologie di progetto direttamente dal pannello di amministrazione.
+
+
+
 # Passi da fare per poter utilizzare il template di Laravel
 
 0. Creo la repository a partire dal template e mi clono la repository appena creata
