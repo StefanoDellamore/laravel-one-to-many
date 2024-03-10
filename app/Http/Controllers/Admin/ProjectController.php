@@ -11,6 +11,7 @@ use App\Http\Requests\UpdateProjectRequest;
 
 //Models
 use App\Models\Project;
+use App\Models\Type;
 
 //Helpers
 use Illuminate\Support\Str;
@@ -31,7 +32,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $types = Type::all();
+        return view('admin.projects.create', compact('types'));
     }
 
     /**

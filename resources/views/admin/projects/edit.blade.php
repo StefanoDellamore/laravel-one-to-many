@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-body">
                     <h1>
-                        modifica Progetto
+                        Modifica Progetto
                     </h1>
 
                     <form action="{{ route('admin.projects.update',['project' => $project->slug])  }}" method="POST">

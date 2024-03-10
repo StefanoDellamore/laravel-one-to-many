@@ -15,15 +15,24 @@
                         @csrf
                         
                         <label for="title" class="form-label">Nome Progetto</label>
-                        <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Inserisci il nome del nuovo progetto"
+                        <input type="text" class="form-control mb-3 @error('title') is-invalid @enderror" id="title" name="title" placeholder="Inserisci il nome del nuovo progetto"
                             maxlength="1024" value="{{ old('title') }}">
                         @error('thumb')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
                         @enderror
+                        <div class="mb-3">
+                            <label for="type" class="form-label">Modelli</label>
+                            <select name="type" id="type" class="form-select mb-3">
+                                <option value="" disalble selected>Seleziona un modello</option>
+                                @foreach ($types as $type)
+                                    <option value="{{ $type->id }}">{{ $type->title }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <label for="content" class="form-label">Descrizione</label>
-                        <input type="text" class="form-control @error('content') is-invalid @enderror" id="content" name="content" placeholder="Inserisci la descrizione del progetto"
+                        <input type="text" class="form-control mb-3 @error('content') is-invalid @enderror" id="content" name="content" placeholder="Inserisci la descrizione del progetto"
                             maxlength="1024" value="{{ old('content') }}">
                         @error('thumb')
                             <div class="alert alert-danger">
@@ -32,7 +41,7 @@
                         @enderror
 
                         <label for="update_at" class="form-label">Ora di creazione</label>
-                        <input type="text" class="form-control @error('content') is-invalid @enderror" id="update_at" name="update_at" placeholder="Inserisci l'ora di creazione"
+                        <input type="text" class="form-control mb-3 @error('content') is-invalid @enderror" id="update_at" name="update_at" placeholder="Inserisci l'ora di creazione"
                             maxlength="1024" value="{{ old('update_at') }}">
                         @error('thumb')
                             <div class="alert alert-danger">
@@ -41,7 +50,7 @@
                         @enderror
 
                         <label for="create_at" class="form-label">Data di creazione</label>
-                        <input type="text" class="form-control @error('create_at') is-invalid @enderror" id="create_at" name="create_at" placeholder="Inserisci la data di creazione"
+                        <input type="text" class="form-control mb-3 @error('create_at') is-invalid @enderror" id="create_at" name="create_at" placeholder="Inserisci la data di creazione"
                             maxlength="1024" value="{{ old('create_at') }}">
                         @error('thumb')
                             <div class="alert alert-danger">
