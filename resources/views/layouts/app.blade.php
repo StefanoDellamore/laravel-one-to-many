@@ -27,6 +27,9 @@
                                 <a class="nav-link" href="{{ route('admin.projects.index') }}"> Tutti i Progetti</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.types.index') }}"> Tutti i Modelli</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">Link 3</a>
                             </li>
                         </ul>
