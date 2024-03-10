@@ -23,8 +23,8 @@
                             </div>
                         @enderror
                         <div class="mb-3">
-                            <label for="type" class="form-label">Modelli</label>
-                            <select name="type" id="type" class="form-select mb-3">
+                            <label for="type_id" class="form-label">Modelli</label>
+                            <select name="type_id" id="type_id" class="form-select mb-3">
                                 <option value="" disalble selected>Seleziona un modello</option>
                                 @foreach ($types as $type)
                                     <option value="{{ $type->id }}">{{ $type->title }}</option>
